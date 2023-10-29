@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "betterwithtrinkets",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Better With Trinkets",
   "description": "This mod aims to help new BTA modders.",
   "authors": [
     "Turnip Labs"
@@ -18,11 +18,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+			"googy.betterwithtrinkets.BetterWithTrinkets"
     ]
   },
   "mixins": [
-      "examplemod.mixins.json"
+      "betterwithtrinkets.mixins.json"
   ],
 
   "depends": {
