@@ -1,10 +1,15 @@
 tile.betterwithtrinkets.fuser.name = Fuser
 
+item.betterwithtrinkets.trinket.hint = Can be applied at a fuser
+
 item.betterwithtrinkets.trinket.haste.name = Trinket of Haste
 trinket.betterwithtrinkets.haste.name = Haste
+trinket.betterwithtrinkets.haste.desc = Makes mining faster
 
 item.betterwithtrinkets.trinket.fury.name = Trinket of Fury
 trinket.betterwithtrinkets.fury.name = Fury
+trinket.betterwithtrinkets.fury.desc = Increases damage
 
 item.betterwithtrinkets.trinket.flame.name = Trinket of Flame
 trinket.betterwithtrinkets.flame.name = Flame
+trinket.betterwithtrinkets.flame.desc = Lights things on fire

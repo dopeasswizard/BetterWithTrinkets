@@ -50,4 +50,9 @@ public class TrinketEffect
 	{
 		return I18n.getInstance().translateKey(key + ".name");
 	}
+
+	public String getDescription()
+	{
+		return I18n.getInstance().translateKey(key + ".desc");
+	}
 }

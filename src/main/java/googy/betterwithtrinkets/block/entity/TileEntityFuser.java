@@ -87,8 +87,8 @@ public class TileEntityFuser extends TileEntity implements IInventory
 		if (items[ITEM_SLOT] == null || items[TRINKET_SLOT] == null) return false;
 		if (items[OUTPUT_SLOT] != null) return false;
 
+		if (!(items[TRINKET_SLOT].getItem() instanceof ItemTrinket)) return false;
 		ItemTrinket trinketItem = (ItemTrinket) items[TRINKET_SLOT].getItem();
-		if (trinketItem == null) return false;
 
 		return trinketItem.effect.canApply(items[ITEM_SLOT]);
 	}

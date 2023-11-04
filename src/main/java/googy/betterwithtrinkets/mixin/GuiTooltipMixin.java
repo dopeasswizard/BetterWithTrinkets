@@ -1,5 +1,6 @@
 package googy.betterwithtrinkets.mixin;
 
+import googy.betterwithtrinkets.item.ItemTrinket;
 import googy.betterwithtrinkets.trinket.TrinketEffect;
 import googy.betterwithtrinkets.utils.TrinketUtils;
 import net.minecraft.client.gui.GuiTooltip;
@@ -21,12 +22,23 @@ public class GuiTooltipMixin
 	{
 		StringBuilder toolTip = new StringBuilder(info.getReturnValue());
 
-		List<TrinketEffect> trinkets = TrinketUtils.getTrinkets(stack);
+		if (stack.getItem() instanceof ItemTrinket itemTrinket)
+		{
+			toolTip.append("\n");
+			toolTip.append(TextFormatting.formatted(itemTrinket.getHint(), TextFormatting.ORANGE, TextFormatting.ITALIC));
+		}
 
+		List<TrinketEffect> trinkets = TrinketUtils.getTrinkets(stack);
 		for (TrinketEffect trinket : trinkets)
 		{
 			toolTip.append("\n");
 			toolTip.append(TextFormatting.formatted(trinket.getName(), trinket.formatting));
+
+			if (showDescription)
+			{
+				toolTip.append(" - ");
+				toolTip.append(TextFormatting.formatted(trinket.getDescription(), TextFormatting.LIGHT_GRAY));
+			}
 		}
 
 		info.setReturnValue(toolTip.toString());

@@ -24,7 +24,7 @@ public class TrinketEffects
 			effects[effect.id] = effect;
 	}
 
-	public static TrinketEffect haste = new TrinketEffect("haste", 1, EffectTarget.DIGGER, TextFormatting.LIME, 0x55FF55);
-	public static TrinketEffect fury = new TrinketEffect("fury", 2, EffectTarget.SWORD, TextFormatting.RED, 0xFF5555);
-	public static TrinketEffect flame = new TrinketEffect("flame", 3, EffectTarget.WEAPON, TextFormatting.YELLOW, 0xFFFF55);
+	public static TrinketEffect haste = new TrinketEffect("haste", 1, EffectTarget.DIGGER, TextFormatting.LIME, 0x339933);
+	public static TrinketEffect fury = new TrinketEffect("fury", 2, EffectTarget.SWORD, TextFormatting.RED, 0xBB4444);
+	public static TrinketEffect flame = new TrinketEffect("flame", 3, EffectTarget.WEAPON, TextFormatting.YELLOW, 0x999933);
 }
