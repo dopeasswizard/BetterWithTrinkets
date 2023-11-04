@@ -28,7 +28,7 @@ public class EffectTarget
 
 	public static class Armor extends EffectTarget
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemArmor;
 		}
@@ -36,7 +36,7 @@ public class EffectTarget
 
 	public static class ArmorHead extends Armor
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return ((ItemArmor)item).armorPiece == 0;
 		}
@@ -44,7 +44,7 @@ public class EffectTarget
 
 	public static class ArmorChest extends Armor
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return ((ItemArmor)item).armorPiece == 1;
 		}
@@ -52,7 +52,7 @@ public class EffectTarget
 
 	public static class ArmorLegs extends Armor
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return ((ItemArmor)item).armorPiece == 2;
 		}
@@ -60,7 +60,7 @@ public class EffectTarget
 
 	public static class ArmorFeet extends Armor
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return ((ItemArmor)item).armorPiece == 3;
 		}
@@ -68,7 +68,7 @@ public class EffectTarget
 
 	public static class Tool extends EffectTarget
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemTool ||
 				item instanceof ItemToolSword; // somehow ItemToolSword doesn't inherit from ItemTool
@@ -77,7 +77,7 @@ public class EffectTarget
 
 	public static class Digger extends EffectTarget
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemToolPickaxe ||
 				item instanceof ItemToolAxe ||
@@ -87,7 +87,7 @@ public class EffectTarget
 
 	public static class Weapon extends EffectTarget
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemToolSword ||
 				item instanceof ItemBow;
@@ -96,7 +96,7 @@ public class EffectTarget
 
 	public static class Sword extends Weapon
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemToolSword;
 		}
@@ -104,7 +104,7 @@ public class EffectTarget
 
 	public static class Bow extends Weapon
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemBow;
 		}
@@ -112,7 +112,7 @@ public class EffectTarget
 
 	public static class FishingRod extends EffectTarget
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item instanceof ItemFishingRod;
 		}
@@ -120,7 +120,7 @@ public class EffectTarget
 
 	public static class Breakable extends EffectTarget
 	{
-		public boolean canEnchant(Item item)
+		public boolean canApply(Item item)
 		{
 			return item.isDamagable();
 		}

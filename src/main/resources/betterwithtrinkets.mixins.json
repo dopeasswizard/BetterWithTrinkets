@@ -9,6 +9,8 @@
       "EntityPlayerSPMixin"
     ],
     "client": [
+      "GuiTooltipMixin",
+      "ItemEntityRendererMixin"
     ],
     "injectors": {
         "defaultRequire": 1

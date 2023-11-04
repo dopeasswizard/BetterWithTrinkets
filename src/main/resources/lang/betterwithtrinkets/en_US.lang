@@ -1,4 +1,10 @@
 tile.betterwithtrinkets.fuser.name = Fuser
 
 item.betterwithtrinkets.trinket.haste.name = Trinket of Haste
+trinket.betterwithtrinkets.haste.name = Haste
+
 item.betterwithtrinkets.trinket.fury.name = Trinket of Fury
+trinket.betterwithtrinkets.fury.name = Fury
+
+item.betterwithtrinkets.trinket.flame.name = Trinket of Flame
+trinket.betterwithtrinkets.flame.name = Flame

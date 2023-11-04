@@ -3,14 +3,13 @@ package googy.betterwithtrinkets;
 import googy.betterwithtrinkets.block.BlockFuser;
 import googy.betterwithtrinkets.block.entity.TileEntityFuser;
 import googy.betterwithtrinkets.item.ModItems;
-import googy.betterwithtrinkets.utils.IDUtil;
+import googy.betterwithtrinkets.utils.IDUtils;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
-import turniplabs.halplibe.helper.BlockHelper;
 import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.util.ConfigHandler;
 
@@ -19,7 +18,7 @@ import java.util.Properties;
 
 public class BetterWithTrinkets implements ModInitializer {
     public static final String MOD_ID = "betterwithtrinkets";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOG = LoggerFactory.getLogger(MOD_ID);
 
 
 	public static final ConfigHandler config;
@@ -31,7 +30,7 @@ public class BetterWithTrinkets implements ModInitializer {
 
 		config = new ConfigHandler(MOD_ID, prop);
 
-		IDUtil.init(config.getInt("starting_block_id"), config.getInt("starting_item_id"));
+		IDUtils.init(config.getInt("starting_block_id"), config.getInt("starting_item_id"));
 		config.updateConfig();
 	}
 
@@ -39,11 +38,11 @@ public class BetterWithTrinkets implements ModInitializer {
 		.setHardness(5)
 		.setResistance(1200)
 		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-		.build(new BlockFuser("fuser", IDUtil.nextBlock()));
+		.build(new BlockFuser("fuser", IDUtils.nextBlock()));
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Better with trinkets initializing...");
+        LOG.info("Better with trinkets initializing...");
 
 		EntityHelper.createTileEntity(TileEntityFuser.class, "Fuser");
 

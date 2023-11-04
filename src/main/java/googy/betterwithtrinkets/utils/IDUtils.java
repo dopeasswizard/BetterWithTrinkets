@@ -1,13 +1,13 @@
 package googy.betterwithtrinkets.utils;
 
-public class IDUtil
+public class IDUtils
 {
 	private static int blockID;
 	private static int itemID;
 
 	public static void init(int blockID, int itemID) {
-		IDUtil.blockID = blockID;
-		IDUtil.itemID = itemID;
+		IDUtils.blockID = blockID;
+		IDUtils.itemID = itemID;
 	}
 
 
